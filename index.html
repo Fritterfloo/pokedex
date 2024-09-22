@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokédex</h1>
+        <input type="text" id="searchBar" placeholder="Search Pokémon by name or number...">
+        <div id="filters">
+            <select id="filterType">
+                <option value="all">All Types</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <!-- Add more type filters -->
+            </select>
+
+            <select id="filterGeneration">
+                <option value="all">All Generations</option>
+                <option value="generation-1">Generation 1</option>
+                <option value="generation-2">Generation 2</option>
+                <!-- Add more generation filters -->
+            </select>
+        </div>
+    </header>
+
+    <!-- Camera Capture Section -->
+    <div id="cameraSection">
+        <button id="captureButton">Capture Pokémon Image</button>
+        <video id="cameraStream" width="320" height="240" autoplay></video>
+        <canvas id="captureCanvas" style="display:none;"></canvas>
+    </div>
+
+    <section id="pokemonGrid">
+        <!-- Pokémon cards will be inserted dynamically -->
+    </section>
+
+    <!-- Modal for Detailed Pokémon View -->
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="pokemonDetails"></div>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
